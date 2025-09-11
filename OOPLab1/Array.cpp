@@ -43,7 +43,7 @@ void Array::printAvgAndSKO() {
 	sko /= len - 1;
 	sko = pow(sko, 0.5);
 
-	cout << "# | Среднее значение массива: " << avg << " СКО равен: " << sko;
+	cout << "# | Среднее значение массива: " << avg << " СКО равно: " << sko;
 }
 
 int Array::printLen() {
@@ -59,9 +59,8 @@ void Array::fillArr() {
 void Array::sortArr(bool ascending) {
 	for (int i = 0; i < len - 1; ++i) {
 		for (int j = 0; j < len - i - 1; ++j) {
-			if ((ascending && arr[j] > arr[j + 1]) ||
-				(!ascending && arr[j] < arr[j + 1])) {
-				std::swap(arr[j], arr[j + 1]);
+			if ((ascending && arr[j] > arr[j + 1]) || (!ascending && arr[j] < arr[j + 1])) {
+				swap(arr[j], arr[j + 1]);
 			}
 		}
 	}
