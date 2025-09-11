@@ -1,4 +1,4 @@
-﻿#include "Array.h"
+#include "Array.h"
 #include <iostream>
 
 using namespace std;
@@ -6,7 +6,7 @@ using namespace std;
 void Array::createArr(int newLen) { 
 
 	if (len < 0) {
-		cout << "Размерность массива можно создать только из неотрицательных чисел!" << endl;
+		cout << "! | Размерность массива можно создать только из неотрицательных чисел!" << endl;
 		this->len = 0;
 	}
 
