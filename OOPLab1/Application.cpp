@@ -39,7 +39,7 @@ void Application::exec() {
 		
 		case 0: return;	
 
-		default: cout << "!| Ошибка! Введите число от 0 до 7.." << endl; break;
+		default: cout << "!| Ошибка! Введите число от 0 до 7." << endl; break;
 		}
 
 		cout << endl;
