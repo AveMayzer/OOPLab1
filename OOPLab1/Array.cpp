@@ -1,4 +1,4 @@
-#include "Array.h"
+ï»¿#include "Array.h"
 #include <iostream>
 
 using namespace std;
@@ -6,7 +6,7 @@ using namespace std;
 void Array::createArr(int newLen) { 
 
 	if (len < 0) {
-		cout << "Ðàçìåðíîñòü ìàññèâà ìîæíî ñîçäàòü òîëüêî èç íåîòðèöàòåëüíûõ ÷èñåë!" << endl;
+		cout << "Ð Ð°Ð·Ð¼ÐµÑ€Ð½Ð¾ÑÑ‚ÑŒ Ð¼Ð°ÑÑÐ¸Ð²Ð° Ð¼Ð¾Ð¶Ð½Ð¾ ÑÐ¾Ð·Ð´Ð°Ñ‚ÑŒ Ñ‚Ð¾Ð»ÑŒÐºÐ¾ Ð¸Ð· Ð½ÐµÐ¾Ñ‚Ñ€Ð¸Ñ†Ð°Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ñ… Ñ‡Ð¸ÑÐµÐ»!" << endl;
 		this->len = 0;
 	}
 
@@ -43,7 +43,7 @@ void Array::printAvgAndSKO() {
 	sko /= len - 1;
 	sko = pow(sko, 0.5);
 
-	cout << "# | Ñðåäíåå çíà÷åíèå ìàññèâà: " << avg << " ÑÊÎ ðàâåí: " << sko;
+	cout << "# | Ð¡Ñ€ÐµÐ´Ð½ÐµÐµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð¼Ð°ÑÑÐ¸Ð²Ð°: " << avg << " Ð¡ÐšÐž Ñ€Ð°Ð²ÐµÐ½: " << sko;
 }
 
 int Array::printLen() {
@@ -68,7 +68,7 @@ void Array::sortArr(bool ascending) {
 }
 void Array::changeElem(int index, number newValue) {
 	if (index < 0 || index >= len) {
-		cout << "! | Èíäåêñ âûõîäèò çà ãðàíèöû ìàññèâà!" << endl;
+		cout << "! | Ð˜Ð½Ð´ÐµÐºÑ Ð²Ñ‹Ñ…Ð¾Ð´Ð¸Ñ‚ Ð·Ð° Ð³Ñ€Ð°Ð½Ð¸Ñ†Ñ‹ Ð¼Ð°ÑÑÐ¸Ð²Ð°!" << endl;
 		return;
 	}
 	arr[index] = newValue;
@@ -76,7 +76,7 @@ void Array::changeElem(int index, number newValue) {
 
 void Array::resizeArr(int newLen) {
 	if (newLen < 0) {
-		cout << "! | Ðàçìåðíîñòü ìàññèâà ìîæíî ñîçäàòü òîëüêî èç íåîòðèöàòåëüíûõ ÷èñåë!" << endl;
+		cout << "! | Ð Ð°Ð·Ð¼ÐµÑ€Ð½Ð¾ÑÑ‚ÑŒ Ð¼Ð°ÑÑÐ¸Ð²Ð° Ð¼Ð¾Ð¶Ð½Ð¾ ÑÐ¾Ð·Ð´Ð°Ñ‚ÑŒ Ñ‚Ð¾Ð»ÑŒÐºÐ¾ Ð¸Ð· Ð½ÐµÐ¾Ñ‚Ñ€Ð¸Ñ†Ð°Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ñ… Ñ‡Ð¸ÑÐµÐ»!" << endl;
 		return;
 	}
 	number* newArr = new number[newLen];
