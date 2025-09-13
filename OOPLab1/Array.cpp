@@ -1,4 +1,4 @@
-#include "Array.h"
+﻿#include "Array.h"
 #include <iostream>
 
 using namespace std;
@@ -90,6 +90,8 @@ void Array::resize(int newLen) {
 	for (int i = minLen; i < newLen; ++i) { 
 		newArr[i] = 0;
 	}
+
+	this->len = newLen;
 
 	delete[] arr;
 	arr = newArr;

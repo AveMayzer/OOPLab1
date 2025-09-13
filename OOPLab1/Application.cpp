@@ -1,4 +1,4 @@
-#include "Application.h"
+﻿#include "Application.h"
 #include "iostream"
 
 using namespace std;
@@ -33,7 +33,7 @@ void Application::exec() {
 		case 5: cout << "# | Введите 1 для сортировки по возрастанию, 0 - по убыванию: ";
 			cin >> asc; arr->sort(asc); break;
 		case 6: cout << "# | Введите новое значение размерности массива: "; cin >> lenChoice; 
-			arr->resize(lenChoice); break;
+			arr->resize(lenChoice); arr->printAll(); break;
 		case 7: cout << "# | Введите индекс элемента, который хотите изменить: "; cin >> indexChoice;
 			cout << "# | Введите новое значение элемента: "; cin >> newValue;
 			arr->changeElem(indexChoice, newValue); break;
