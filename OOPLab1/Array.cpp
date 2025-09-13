@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void Array::createArr(int newLen) { 
+void Array::create(int newLen) { 
 
 	if (len < 0) {
 		cout << "! | Размерность массива можно создать только из неотрицательных чисел!" << endl;
@@ -18,7 +18,7 @@ void Array::createArr(int newLen) {
 
 }
 
-void Array::printArr() {
+void Array::printAll() {
 	for (int i = 0; i < len; i++) {
 		cout << *(arr + i) << " ";
 
@@ -50,13 +50,13 @@ int Array::printLen() {
 	return this->len;
 }
 
-void Array::fillArr() {
+void Array::fill() {
 	for (int i = 0; i < len; i++) {
 		cin >> *(arr + i);
 	}
 }
 
-void Array::sortArr(bool ascending) {
+void Array::sort(bool ascending) {
 	for (int i = 0; i < len - 1; ++i) {
 		for (int j = 0; j < len - i - 1; ++j) {
 			if ((ascending && arr[j] > arr[j + 1]) || (!ascending && arr[j] < arr[j + 1])) {
@@ -73,7 +73,7 @@ void Array::changeElem(int index, number newValue) {
 	arr[index] = newValue;
 }
 
-void Array::resizeArr(int newLen) {
+void Array::resize(int newLen) {
 	if (newLen < 0) {
 		cout << "! | Размерность массива можно создать только из неотрицательных чисел!" << endl;
 		return;

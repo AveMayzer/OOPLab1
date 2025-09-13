@@ -3,13 +3,13 @@
 class Array
 {
 public:
-	void createArr(int newLen);
-	void printArr();
-	void fillArr();
+	void create(int newLen);
+	void printAll();
+	void fill();
 	void printAvgAndSKO();
-	void sortArr(bool ascending);
+	void sort(bool ascending);
 	void changeElem(int index, number newValue);
-	void resizeArr(int newLen);
+	void resize(int newLen);
 	int printLen();
 
 private:

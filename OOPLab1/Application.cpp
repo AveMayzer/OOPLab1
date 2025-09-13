@@ -23,16 +23,16 @@ void Application::exec() {
 		switch (choice) {
 		case 1: cout << "# | Введите значение размерности массива: " << endl;
 			cin >> lenChoice;
-			arr->createArr(lenChoice); break;
+			arr->create(lenChoice); break;
 		case 2: cout << "# | Сейчас вам предстоит заполнить массив до " << arr->printLen() << " элемента." << endl;
-			arr->fillArr(); break;
-		case 3: cout << "# | Массив: "; arr->printArr();
+			arr->fill(); break;
+		case 3: cout << "# | Массив: "; arr->printAll();
 			cout << endl; break;
 		case 4: arr->printAvgAndSKO(); break;
 		case 5: cout << "# | Введите 1 для сортировки по возрастанию, 0 - по убыванию: ";
-			cin >> asc; arr->sortArr(asc); break;
+			cin >> asc; arr->sort(asc); break;
 		case 6: cout << "# | Введите новое значение размерности массива: "; cin >> lenChoice; 
-			arr->resizeArr(lenChoice); break;
+			arr->resize(lenChoice); break;
 		case 7: cout << "# | Введите индекс элемента, который хотите изменить: "; cin >> indexChoice;
 			cout << "# | Введите новое значение элемента: "; cin >> newValue;
 			arr->changeElem(indexChoice, newValue); break;
