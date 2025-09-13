@@ -8,6 +8,7 @@ Application::Application() {
 }
 
 void Application::exec() {
+
 	setlocale(0, "");
 	number newValue;
 	int choice, lenChoice, indexChoice;

@@ -3,6 +3,9 @@
 
 using namespace std;
 
+Array::Array() {
+}
+
 void Array::create(int newLen) { 
 
 	if (len < 0) {

@@ -3,6 +3,7 @@
 class Array
 {
 public:
+	Array();
 	void create(int newLen);
 	void printAll();
 	void fill();
