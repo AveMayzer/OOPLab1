@@ -70,7 +70,7 @@ void Array::sort(bool ascending) {
 }
 void Array::changeElem(int index, number newValue) {
 	if (index < 0 || index >= len) {
-		cout << "! | Индекс выходит за границы массива!" << endl;
+		cout << "! | Индекс выходит за границы массива! " << endl;
 		return;
 	}
 	arr[index] = newValue;

@@ -30,7 +30,7 @@ void Application::exec() {
 		case 3: cout << "# | Массив: "; arr->printAll();
 			cout << endl; break;
 		case 4: arr->printAvgAndSKO(); break;
-		case 5: cout << "# | Введите 1 для сортировки по возрастанию, 0 - по убыванию: ";
+		case 5: cout << "# | Введите 1 для сортировки по возрастанию, 0 - по убыванию:  ";
 			cin >> asc; arr->sort(asc); break;
 		case 6: cout << "# | Введите новое значение размерности массива: "; cin >> lenChoice; 
 			arr->resize(lenChoice); arr->printAll(); break;
