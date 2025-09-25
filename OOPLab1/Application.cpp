@@ -22,30 +22,40 @@ void Application::exec() {
 		cin >> choice;
 
 		switch (choice) {
+
 		case 1: cout << "# | Введите значение размерности массива: " << endl;
 			cin >> lenChoice;
 			arr->create(lenChoice); break;
+
 		case 2: cout << "# | Сейчас вам предстоит заполнить массив до " << arr->printLen() << " элемента." << endl;
-			arr->fill(); break;
-		case 3: cout << "# | Массив: "; arr->printAll();
-			cout << endl; break;
+			arr->fill();
+			cout << "Массив: "; arr->printAll(); break;
+
+		case 3: cout << "# | Массив: "; arr->printAll(); break;
+
 		case 4: arr->printAvgAndSKO(); break;
+
 		case 5: cout << "# | Введите 1 для сортировки по возрастанию, 0 - по убыванию:  ";
-			cin >> asc; arr->sort(asc); break;
+			cin >> asc;
+			arr->sort(asc);
+			cout << "Массив: "; arr->printAll(); break;
+
 		case 6: cout << "# | Введите новое значение размерности массива: "; cin >> lenChoice; 
 			arr->resize(lenChoice); arr->printAll(); break;
+
 		case 7: cout << "# | Введите индекс элемента, который хотите изменить: "; cin >> indexChoice;
 			cout << "# | Введите новое значение элемента: "; cin >> newValue;
-			arr->changeElem(indexChoice, newValue); break;
-		
+			arr->changeElem(indexChoice, newValue);
+			cout << "Массив: "; arr->printAll(); break;
+
 		case 0: return;	
 
-		default: cout << "!| Ошибка! Введите число от 0 до 7." << endl; break;
+		default: cout << "! | Ошибка! Введите число от 0 до 7." << endl; break;
 		}
 
 		cout << endl;
 	}
-	
+	delete[] arr;
 	return;
 }
 

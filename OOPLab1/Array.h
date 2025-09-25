@@ -1,9 +1,10 @@
-#pragma once
+﻿#pragma once
 #include "number.h"
 class Array
 {
 public:
 	Array();
+	~Array();
 	void create(int newLen);
 	void printAll();
 	void fill();

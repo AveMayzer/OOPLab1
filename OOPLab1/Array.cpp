@@ -6,6 +6,10 @@ using namespace std;
 Array::Array() {
 }
 
+Array::~Array() { 
+	delete[] arr;
+}
+
 void Array::create(int newLen) { 
 
 	if (len < 0) {
@@ -14,18 +18,17 @@ void Array::create(int newLen) {
 	}
 
 
-
 	this->len = newLen;
 	arr = new number[len];
-
 
 }
 
 void Array::printAll() {
 	for (int i = 0; i < len; i++) {
 		cout << *(arr + i) << " ";
-
 	}
+
+	cout << endl;
 }
 
 void Array::printAvgAndSKO() {
