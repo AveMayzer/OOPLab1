@@ -5,7 +5,6 @@
 using namespace std;
 
 TComplex::TComplex() {
-    re = im = 0;
 }
 
 
@@ -72,14 +71,11 @@ double TComplex::abs(TComplex* complex) {
 }
 
 TComplex pow(TComplex complex, double n) {
-    double arg;
-    if (complex.re > 0) arg = atan(complex.im / complex.re);
-    else if (complex.re < 0 && complex.im >= 0) arg = 3.14 - atan(complex.im / complex.re);
-    else if (complex.re == 0 && complex.im > 0) arg = 3.14 / 2;
-    else if (complex.re < 0 && complex.im < 0) arg = -3.14 + atan(complex.im / complex.re);
-    else arg = -3.14 / 2;
-    return TComplex(std::pow(complex.abs(&complex), n) * cos(arg * n),
-        std::pow(complex.abs(&complex), n) * sin(arg * n));
+    double r = complex.abs(&complex);
+    double arg = atan2(complex.getIm(), complex.getRe());
+    double new_r = std::pow(r, n);
+    double new_arg = arg * n;
+    return TComplex(new_r * cos(new_arg), new_r * sin(new_arg));
 }
 
 bool TComplex::operator<(TComplex& second) {
