@@ -13,7 +13,7 @@ public:
 	void changeElem(int index, number newValue);
 	void resize(int newLen);
 	int printLen();
-
+	number getElement(int index) const;
 private:
 	int len = 0;
 	number* arr;

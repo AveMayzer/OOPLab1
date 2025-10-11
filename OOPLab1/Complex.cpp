@@ -10,12 +10,12 @@ TComplex::TComplex() {
 
 TComplex::TComplex(double re) {
     this->re = re;
-    im = 0;
 }
 
 
 TComplex::TComplex(double re, double im) {
-    this->re = re; this->im = im;
+    this->re = re;
+    this->im = im;
 }
 
 TComplex TComplex::operator+(const TComplex& other) const {
@@ -32,10 +32,7 @@ TComplex TComplex::operator*(const TComplex& other) const {
 
 TComplex TComplex::operator/(const TComplex& other) const {
     double denom = other.re * other.re + other.im * other.im;
-    return TComplex(
-        (re * other.re + im * other.im) / denom,
-        (im * other.re - re * other.im) / denom
-    );
+    return TComplex( (re * other.re + im * other.im) / denom, (im * other.re - re * other.im) / denom) ;
 }
 
 TComplex TComplex::operator+=(const TComplex& other) {

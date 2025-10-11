@@ -100,3 +100,10 @@ void Array::resize(int newLen) {
 	arr = newArr;
 
 }
+number Array::getElement(int index) const {
+	if (index < 0 || index >= len) {
+		cout << "! | Индекс выходит за границы массива!" << endl;
+		return number(0); 
+	}
+	return arr[index];
+}
